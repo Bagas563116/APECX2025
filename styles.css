@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #001f54;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #003366;
+  list-style: none;
+  padding: 10px;
+  min-width: 150px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 5px 10px;
+}
+
+.dropdown-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: url('hero-image.jpg') no-repeat center/cover;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+section {
+  padding: 50px 50px;
+  text-align: center;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline, .faq, footer {
+  background: #e0e0e0;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+}
