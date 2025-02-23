@@ -11,79 +11,145 @@ body {
   background-color: #f8f9fa;
 }
 
-/* Navigation */
+/* ------------------------- navigation ------------------------- */
 nav {
+  position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Menjaga logo di kiri dan menu di kanan */
   align-items: center;
-  background: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8); 
   padding: 15px 30px;
-  color: #fff;
+  color: #001f54;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #001f54;
 }
 
 nav ul {
   display: flex;
   list-style: none;
+  margin-left: auto; /* Memaksa menu ke kanan */
 }
 
 nav ul li {
   position: relative;
-  margin: 0 15px;
+  margin-left: 20px;
 }
 
 nav ul li a {
-  color: #001f54;
   text-decoration: none;
-  font-weight: bold;
+  color: #001f54;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
 }
 
-/* Dropdown Menu */
+nav ul li a:hover {
+  color: #ffffff;
+}
+/* ------------------------ dropdown Menu ----------------------- */
+
+.dropdown {
+  position: relative;
+}
+
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  background: #003366;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #003366; 
   list-style: none;
-  padding: 8px 0;
-  min-width: 180px;
+  padding: 10px 0;
+  min-width: 200px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translate(-50%, 10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  text-align: center;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .dropdown-menu li {
-  padding: 10px 15px;
+  padding: 12px 15px;
 }
 
 .dropdown-menu li a {
-  color: #fff;
-  font-size: 14px;
+  color: white;
+  font-size: 14px; 
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
 }
 
 .dropdown-menu li:hover {
-  background: #004080;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
 }
 
-/* Hero Section */
+
+/* styling khusus untuk tombol Register */
+
+.register-btn {
+  background-color: #004080; 
+  color: #fff !important; 
+  padding: 6px 12px; 
+  font-size: 14px; 
+  border-radius: 6px; 
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+  background-color: #001f54;  
+}
+
+
+/* --------------------------------hero section-------------------------------- */
 .hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: #001f54;
-  color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding-bottom: 20px; 
+    text-align: center;
+    background: url("image/hero .png") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: #004080;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 950px;
 }
 
-/* Section Styling */
+
+/* ----------------------about section---------------------- */
 section {
-  padding: 60px 20px;
+  padding: 60px 50px;
   text-align: center;
   background: #ffffff;
   margin-bottom: 30px;
@@ -92,30 +158,155 @@ section {
 }
 
 .about p {
-  max-width: 700px;
+  max-width: 800px;
   margin: 20px auto;
   text-align: justify;
 }
 
-/* Cards */
+.about h1 {
+  max-width: 800px;
+  margin: 20px auto;
+  margin-bottom: 40px; 
+  text-align: justify;
+  text-size-adjust: 100px;
+}
+
+/* ----------------------cards section---------------------- */
+
+.competition h2{
+  max-width: 800px;
+  margin: 20px auto;
+  margin-bottom: 40px; 
+  text-size-adjust: 100px;
+}
+
+.events h2{
+  max-width: 800px;
+  margin: 20px auto;
+  margin-bottom: 40px; 
+  text-size-adjust: 100px;
+}
+
 .cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    gap: 15px;
+    margin: 0 auto;
 }
 
 .card {
-  background: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-  width: 220px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #004080;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    height: 293px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-/* FAQ Section */
+/* -----------------------card competition------------------------- */
+
+.competition {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.competition-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #004080;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    height: 293px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.competition-cards:hover .card {
+    opacity: 0.65;
+    filter: blur(3px);
+    transform: scale(0.9);
+}
+
+.competition-cards .card:hover {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.1);
+}
+
+/* ----------------------event cards (skrollable)---------------------- */
+.events {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-cards {
+    display: flex;
+    flex-wrap: nowrap; /* supaya scroll horizontal */
+    gap: 15px;
+    overflow-x: auto; 
+    padding: 10px;
+    max-width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #004080 #ddd;
+}
+
+/*custom scrollbar */
+.event-cards::-webkit-scrollbar {
+    height: 8px;
+}
+
+.event-cards::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.event-cards::-webkit-scrollbar-thumb {
+    background: #004080;
+    border-radius: 10px;
+}
+
+.event-cards .card {
+    flex: 0 0 auto;
+}
+
+.event-cards:hover .card {
+    opacity: 0.85;
+}
+
+.event-cards .card:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+/* ----------------------FAQ section---------------------- */
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
