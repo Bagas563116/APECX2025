@@ -1,4 +1,4 @@
-/* General Styles */
+/* general styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@ body {
 }
 
 /* ------------------------- navigation ------------------------- */
+
 nav {
   position: fixed;
   display: flex;
@@ -20,7 +21,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8); 
+  background: rgba(255, 255, 255, 0.8);
   padding: 15px 30px;
   color: #001f54;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -29,7 +30,7 @@ nav {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #001f54;
 }
@@ -37,7 +38,7 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
-  margin-left: auto; /* Memaksa menu ke kanan */
+  margin-left: auto; /* memaksa menu ke kanan */
 }
 
 nav ul li {
@@ -54,13 +55,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffffff;
+  color: #001f548a;
 }
-/* ------------------------ dropdown Menu ----------------------- */
 
-.dropdown {
-  position: relative;
-}
+/* ------------------------dropdown Menu----------------------- */
 
 .dropdown-menu {
   display: none;
@@ -68,16 +66,16 @@ nav ul li a:hover {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #003366; 
+  background: #003366ef;
   list-style: none;
-  padding: 10px 0;
-  min-width: 200px;
+  padding: 5px 0;
+  width: max-content;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.34);
   opacity: 0;
   transform: translate(-50%, 10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  text-align: center;
+  text-align: left;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -87,67 +85,65 @@ nav ul li a:hover {
 }
 
 .dropdown-menu li {
-  padding: 12px 15px;
+  padding: 8px 10px 5px 5px;
 }
 
 .dropdown-menu li a {
-  color: white;
-  font-size: 14px; 
+  color: #ffffff;
+  font-size: 14px;
   display: block;
-  padding: 10px 15px;
+  padding: 5px 10px;
   text-decoration: none;
   transition: background 0.3s ease-in-out;
 }
 
-.dropdown-menu li:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
+.dropdown-menu li a:hover {
+  color: #ffffff98;
 }
 
-
 /* styling khusus untuk tombol Register */
-
 .register-btn {
-  background-color: #004080; 
-  color: #fff !important; 
-  padding: 6px 12px; 
-  font-size: 14px; 
-  border-radius: 6px; 
+  background-color: #004080;
+  color: #fff !important;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
   font-weight: bold;
   transition: background 0.3s ease-in-out;
 }
 
 .register-btn:hover {
-  background-color: #001f54;  
+  background-color: #00408062;
+  color: #ffffff !important;
 }
 
-
 /* --------------------------------hero section-------------------------------- */
+
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; 
-    align-items: center; 
-    padding-bottom: 20px; 
-    text-align: center;
-    background: url("image/hero .png") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    color: #004080;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 20px;
+  text-align: center;
+  background: url("image/hero .png") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color: #004080;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    max-width: 950px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  max-width: 950px;
 }
 
-
 /* ----------------------about section---------------------- */
+
 section {
   padding: 60px 50px;
   text-align: center;
@@ -166,145 +162,144 @@ section {
 .about h1 {
   max-width: 800px;
   margin: 20px auto;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
   text-align: justify;
   text-size-adjust: 100px;
 }
 
 /* ----------------------cards section---------------------- */
 
-.competition h2{
+.competition h2 {
   max-width: 800px;
   margin: 20px auto;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
   text-size-adjust: 100px;
 }
 
-.events h2{
+.events h2 {
   max-width: 800px;
   margin: 20px auto;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
   text-size-adjust: 100px;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 800px;
-    gap: 15px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  gap: 15px;
+  margin: 0 auto;
 }
 
 .card {
-    background: #004080;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
-    height: 293px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
+  background: #004080;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  height: 293px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 /* -----------------------card competition------------------------- */
 
 .competition {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 50px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
 }
 
 .competition-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    max-width: 800px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .card {
-    background: #004080;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
-    height: 293px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
+  background: #004080;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  height: 293px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .competition-cards:hover .card {
-    opacity: 0.65;
-    filter: blur(3px);
-    transform: scale(0.9);
+  opacity: 0.65;
+  filter: blur(3px);
+  transform: scale(0.9);
 }
 
 .competition-cards .card:hover {
-    opacity: 1;
-    filter: blur(0);
-    transform: scale(1.1);
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1.1);
 }
 
 /* ----------------------event cards (skrollable)---------------------- */
 .events {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .event-cards {
-    display: flex;
-    flex-wrap: nowrap; /* supaya scroll horizontal */
-    gap: 15px;
-    overflow-x: auto; 
-    padding: 10px;
-    max-width: 100%;
-    scrollbar-width: thin;
-    scrollbar-color: #004080 #ddd;
+  display: flex;
+  flex-wrap: nowrap; /* supaya scroll horizontal */
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px;
+  max-width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #004080 #ddd;
 }
 
 /*custom scrollbar */
 .event-cards::-webkit-scrollbar {
-    height: 8px;
+  height: 8px;
 }
 
 .event-cards::-webkit-scrollbar-track {
-    background: #ddd;
-    border-radius: 10px;
+  background: #ddd;
+  border-radius: 10px;
 }
 
 .event-cards::-webkit-scrollbar-thumb {
-    background: #004080;
-    border-radius: 10px;
+  background: #004080;
+  border-radius: 10px;
 }
 
 .event-cards .card {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .event-cards:hover .card {
-    opacity: 0.85;
+  opacity: 0.7;
 }
 
 .event-cards .card:hover {
-    opacity: 1;
-    transform: scale(1.1);
+  opacity: 1;
+  transform: scale(1.1);
 }
-
 
 /* ----------------------FAQ section---------------------- */
 .faq-container {
