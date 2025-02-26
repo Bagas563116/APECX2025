@@ -1,9 +1,15 @@
 /* general styles */
+:root {
+  --color-bg: #000a1a;
+  --color-text: #d6e8ee;
+  --color-primary: #018abe;
+  --color-secondary: #97cadb;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: poppins, sans-serif;
 }
 
 body {
@@ -16,7 +22,7 @@ body {
 nav {
   position: fixed;
   display: flex;
-  justify-content: space-between; /* Menjaga logo di kiri dan menu di kanan */
+  justify-content: space-between; /* menjaga logo di kiri dan menu di kanan */
   align-items: center;
   top: 0;
   left: 0;
@@ -169,20 +175,6 @@ section {
 
 /* ----------------------cards section---------------------- */
 
-.competition h2 {
-  max-width: 800px;
-  margin: 20px auto;
-  margin-bottom: 40px;
-  text-size-adjust: 100px;
-}
-
-.events h2 {
-  max-width: 800px;
-  margin: 20px auto;
-  margin-bottom: 40px;
-  text-size-adjust: 100px;
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -193,20 +185,36 @@ section {
 }
 
 .card {
-  background: #004080;
+  background-color: #003366;
   color: #fff;
   padding: 20px;
   border-radius: 10px;
   width: 220px;
   height: 293px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Mencegah teks keluar */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card h3 {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
 }
 
 /* -----------------------card competition------------------------- */
@@ -220,27 +228,17 @@ section {
 .competition-cards {
   display: flex;
   flex-wrap: wrap;
+  bottom: 20px;
   justify-content: center;
   gap: 15px;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.card {
-  background: #004080;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 220px;
-  height: 293px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
+.competition h2 {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 50px;
 }
 
 .competition-cards:hover .card {
@@ -255,11 +253,21 @@ section {
   transform: scale(1.1);
 }
 
+.competition-cards .card {
+  background: url("image/card comp.png") no-repeat center/cover;
+}
+
 /* ----------------------event cards (skrollable)---------------------- */
 .events {
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
+}
+
+.events h2 {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 50px;
 }
 
 .event-cards {
@@ -273,7 +281,7 @@ section {
   scrollbar-color: #004080 #ddd;
 }
 
-/*custom scrollbar */
+/* custom scrollbar */
 .event-cards::-webkit-scrollbar {
   height: 8px;
 }
@@ -299,6 +307,114 @@ section {
 .event-cards .card:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+/* ------------------------time line--------------------------*/
+
+.timeline {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.timeline h2 {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 50px;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #003366;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item .content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover .content {
+  transform: scale(1.05);
+}
+
+.timeline-item.left .content::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -12px;
+  width: 12px;
+  height: 12px;
+  background-color: #ff3b30;
+  border-radius: 50%;
+}
+
+.timeline-item.right .content::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -12px;
+  width: 12px;
+  height: 12px;
+  background-color: #007aff;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline-container::after {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    text-align: left;
+  }
+
+  .timeline-item.left {
+    left: 0;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item .content::before {
+    left: -25px;
+  }
 }
 
 /* ----------------------FAQ section---------------------- */
