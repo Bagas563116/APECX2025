@@ -22,7 +22,7 @@ body {
 nav {
   position: fixed;
   display: flex;
-  justify-content: space-between; /* menjaga logo di kiri dan menu di kanan */
+  justify-content: space-between;
   align-items: center;
   top: 0;
   left: 0;
@@ -33,6 +33,53 @@ nav {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   z-index: 1000;
+}
+
+.hamburger {
+  display: none; /* Sembunyikan hamburger di desktop */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Menyembunyikan menu di mobile */
+#nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+#nav-links li {
+  position: relative;
+  margin-left: 20px;
+}
+
+#nav-links {
+  display: flex; /* Tampilkan menu di desktop */
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block; /* Tampilkan hamburger di tablet dan mobile */
+  }
+
+  #nav-links {
+    display: none; /* Sembunyikan menu di tablet dan mobile */
+    flex-direction: column; /* Menu vertikal */
+    position: absolute;
+    top: 60px; /* Di bawah navbar */
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #nav-links.active {
+    display: flex; /* Tampilkan menu saat hamburger diklik */
+  }
+
+  #nav-links li {
+    margin: 10px 0; /* Jarak antar item menu */
+  }
 }
 
 .logo {
@@ -139,13 +186,37 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Ukuran default untuk desktop */
   margin-bottom: 10px;
+  max-width: 900px;
 }
+
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Ukuran default untuk desktop */
   margin-bottom: 20px;
-  max-width: 950px;
+  max-width: 900px;
+}
+
+/* Media query untuk tablet */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem; /* Ukuran font untuk tablet */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Ukuran font untuk tablet */
+  }
+}
+
+/* Media query untuk mobile */
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem; /* Ukuran font untuk mobile */
+  }
+
+  .hero p {
+    font-size: 0.9rem; /* Ukuran font untuk mobile */
+  }
 }
 
 /* ----------------------about section---------------------- */
@@ -378,7 +449,7 @@ section {
   right: -12px;
   width: 12px;
   height: 12px;
-  background-color: #ff3b30;
+  background-color: #007aff;
   border-radius: 50%;
 }
 
@@ -434,14 +505,82 @@ section {
 
 .faq-item p {
   font-size: 16px;
-  color: #555;
+  color: #555555e0;
 }
 
-/* Footer */
+/* ------------------------Footer---------------------------- */
+
 footer {
   background: #001f54;
-  color: #fff;
+  color: var(--color-text);
+  padding: 30px 0;
   text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  color: var(--color-text);
+  margin-bottom: 10px;
+  border-bottom: 2px;
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--color-primary);
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.footer-section a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: var(--color-primary);
+}
+
+.social-icon {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
 }

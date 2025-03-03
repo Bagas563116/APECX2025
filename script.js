@@ -1,8 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("APEX 2025 website loaded successfully!");
 
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector("nav ul");
+
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+
   const cards = document.querySelectorAll(".card");
-  cards.forEach(card => {
+  cards.forEach((card) => {
     card.addEventListener("mouseover", () => {
       card.style.transform = "scale(1.05)";
       card.style.transition = "0.3s";
