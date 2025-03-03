@@ -1,13 +1,16 @@
+// script.js
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("APEX 2025 website loaded successfully!");
+  console.log("APEC 2025 website loaded successfully!");
 
   const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector("nav ul");
+  const navLinks = document.getElementById("nav-links"); // Menggunakan ID yang benar
 
+  // Menambahkan event listener untuk hamburger menu
   hamburger.addEventListener("click", function () {
-    navLinks.classList.toggle("active");
+    navLinks.classList.toggle("active"); // Toggle class 'active' untuk menampilkan/menyembunyikan menu
   });
 
+  // Menambahkan efek hover pada kartu
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
     card.addEventListener("mouseover", () => {
@@ -19,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Menangani pengiriman form
   const form = document.querySelector("form");
   if (form) {
     form.addEventListener("submit", (e) => {

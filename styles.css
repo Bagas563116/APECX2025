@@ -184,17 +184,18 @@ nav ul li a:hover {
   height: 100vh;
   color: #004080;
 }
-
 .hero h1 {
   font-size: 2.5rem; /* Ukuran default untuk desktop */
   margin-bottom: 10px;
   max-width: 900px;
+  padding: 0 20px; /* Tambahkan padding horizontal */
 }
 
 .hero p {
   font-size: 1.2rem; /* Ukuran default untuk desktop */
   margin-bottom: 20px;
   max-width: 900px;
+  padding: 0 20px; /* Tambahkan padding horizontal */
 }
 
 /* Media query untuk tablet */
