@@ -1,9 +1,10 @@
 /* general styles */
 :root {
-  --color-bg: #000a1a;
-  --color-text: #d6e8ee;
-  --color-primary: #018abe;
-  --color-secondary: #97cadb;
+  --color-bg: #f8f9fa;
+  --color-text_off: #002347;
+  --color-text_on: #f4a261;
+  --color-primer: #053f5c;
+  --color-sekunder: #f76c6c;
 }
 * {
   margin: 0;
@@ -14,7 +15,7 @@
 
 body {
   line-height: 1.6;
-  background-color: #f8f9fa;
+  background-color: var(--color-bg);
 }
 
 /* ------------------------- navigation ------------------------- */
@@ -27,9 +28,9 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--color-bg);
   padding: 15px 30px;
-  color: #001f54;
+  color: var(--color-text);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -69,7 +70,7 @@ nav {
     top: 60px; /* Di bawah navbar */
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--color-bg);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
@@ -85,13 +86,13 @@ nav {
 .logo {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #001f54;
+  color: var(--color-text_off);
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  margin-left: auto; /* memaksa menu ke kanan */
+  margin-left: auto;
 }
 
 nav ul li {
@@ -101,14 +102,14 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #001f54;
+  color: var(--color-text_off);
   font-size: 16px;
   padding: 10px 15px;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #001f548a;
+  color: var(--color-text_on);
 }
 
 /* ------------------------dropdown Menu----------------------- */
@@ -119,7 +120,7 @@ nav ul li a:hover {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #003366ef;
+  background: var(--color-primer);
   list-style: none;
   padding: 5px 0;
   width: max-content;
@@ -142,7 +143,7 @@ nav ul li a:hover {
 }
 
 .dropdown-menu li a {
-  color: #ffffff;
+  color: var(--color-bg);
   font-size: 14px;
   display: block;
   padding: 5px 10px;
@@ -184,18 +185,17 @@ nav ul li a:hover {
   height: 100vh;
   color: #004080;
 }
+
 .hero h1 {
   font-size: 2.5rem; /* Ukuran default untuk desktop */
   margin-bottom: 10px;
   max-width: 900px;
-  padding: 0 20px; /* Tambahkan padding horizontal */
 }
 
 .hero p {
   font-size: 1.2rem; /* Ukuran default untuk desktop */
   margin-bottom: 20px;
   max-width: 900px;
-  padding: 0 20px; /* Tambahkan padding horizontal */
 }
 
 /* Media query untuk tablet */
@@ -225,7 +225,7 @@ nav ul li a:hover {
 section {
   padding: 60px 50px;
   text-align: center;
-  background: #ffffff;
+  background: var(--color-bg);
   margin-bottom: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -257,8 +257,8 @@ section {
 }
 
 .card {
-  background-color: #003366;
-  color: #fff;
+  background-color: var(--color-primer);
+  color: var(--color-bg);
   padding: 20px;
   border-radius: 10px;
   width: 220px;
@@ -309,7 +309,7 @@ section {
 
 .competition h2 {
   font-size: 28px;
-  color: #003366;
+  color: var(--color-text_off);
   margin-bottom: 50px;
 }
 
@@ -338,7 +338,7 @@ section {
 
 .events h2 {
   font-size: 28px;
-  color: #003366;
+  color: var(--color-text_off);
   margin-bottom: 50px;
 }
 
@@ -379,6 +379,10 @@ section {
 .event-cards .card:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+.event-cards .card {
+  background: url("image/card comp.png") no-repeat center/cover;
 }
 
 /* ------------------------time line--------------------------*/
@@ -513,7 +517,7 @@ section {
 
 footer {
   background: #001f54;
-  color: var(--color-text);
+  color: var(--color-bg);
   padding: 30px 0;
   text-align: center;
 }
@@ -535,7 +539,7 @@ footer {
 
 .footer-section h3 {
   font-size: 18px;
-  color: var(--color-text);
+  color: var(--color-bg);
   margin-bottom: 10px;
   border-bottom: 2px;
   padding-bottom: 5px;
@@ -551,13 +555,13 @@ footer {
 }
 
 .footer-section ul li a {
-  color: var(--color-text);
+  color: var(--color-bg);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-  color: var(--color-primary);
+  color: var(--color-text_on);
 }
 
 .footer-section p {
@@ -571,7 +575,7 @@ footer {
 }
 
 .footer-section a:hover {
-  color: var(--color-primary);
+  color: var(--color-text_on);
 }
 
 .social-icon {
@@ -584,4 +588,66 @@ footer {
   margin-top: 20px;
   font-size: 14px;
   opacity: 0.8;
+}
+
+/* ------------------------competition 1---------------------------- */
+
+/* Competition Section */
+
+.competition-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.competition-card {
+  flex: 1;
+  max-width: 350px;
+}
+
+.competition-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.competition-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.competition-info h2 {
+  font-size: 24px;
+  color: var(--color-primer);
+}
+
+.competition-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text_off);
+  text-align: justify;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+}
+
+.btn-register {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: var(--color-primer);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-register:hover {
+  background: var(--color-text_off);
 }

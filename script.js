@@ -3,11 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("APEC 2025 website loaded successfully!");
 
   const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.getElementById("nav-links"); // Menggunakan ID yang benar
+  const navLinks = document.getElementById("nav-links");
 
   // Menambahkan event listener untuk hamburger menu
   hamburger.addEventListener("click", function () {
     navLinks.classList.toggle("active"); // Toggle class 'active' untuk menampilkan/menyembunyikan menu
+  });
+
+  // Menambahkan event listener untuk dropdown
+  const dropdowns = document.querySelectorAll(".dropdown > a");
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", function (e) {
+      e.preventDefault(); // Mencegah navigasi default
+      const parentLi = this.parentElement; // Ambil elemen li induk
+      parentLi.classList.toggle("active"); // Toggle class 'active' untuk menampilkan/menyembunyikan submenu
+    });
   });
 
   // Menambahkan efek hover pada kartu
