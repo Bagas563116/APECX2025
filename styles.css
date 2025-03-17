@@ -5,6 +5,7 @@
   --color-text_on: #f4a261;
   --color-primer: #053f5c;
   --color-sekunder: #f76c6c;
+  --color-primer2: #29b8ff;
 }
 * {
   margin: 0;
@@ -28,7 +29,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--color-bg);
+  background: rgba(255, 255, 255, 0.5);
   padding: 15px 30px;
   color: var(--color-text);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -120,12 +121,12 @@ nav ul li a:hover {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--color-primer);
+  background: rgba(5, 63, 92, 0.92);
   list-style: none;
   padding: 5px 0;
   width: max-content;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.416);
   opacity: 0;
   transform: translate(-50%, 10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -308,9 +309,16 @@ section {
 }
 
 .competition h2 {
-  font-size: 28px;
+  font-size: 24px;
   color: var(--color-text_off);
   margin-bottom: 50px;
+}
+
+.competition h1 {
+  font-size: 29px;
+  color: var(--color-text_off);
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .competition-cards:hover .card {
@@ -337,9 +345,16 @@ section {
 }
 
 .events h2 {
-  font-size: 28px;
+  font-size: 24px;
   color: var(--color-text_off);
   margin-bottom: 50px;
+}
+
+.events h1 {
+  font-size: 29px;
+  color: var(--color-text_off);
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .event-cards {
@@ -396,7 +411,7 @@ section {
 
 .timeline h2 {
   font-size: 28px;
-  color: #003366;
+  color: var(--color-text_off);
   margin-bottom: 50px;
 }
 
