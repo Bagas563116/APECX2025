@@ -590,7 +590,7 @@ footer {
   opacity: 0.8;
 }
 
-/* ------------------------competition 1---------------------------- */
+/* ------------------------competition---------------------------- */
 
 /* Competition Section */
 
@@ -650,4 +650,71 @@ footer {
 
 .btn-register:hover {
   background: var(--color-text_off);
+}
+
+/* ------------------------registrasi---------------------------- */
+.register {
+  text-align: center;
+  padding: 50px;
+}
+
+.register h2 {
+  color: var(--color-text_off);
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* Card Layout */
+.rcard-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Responsif: jika tidak cukup, turun ke bawah */
+}
+
+.rcard {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.rcard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.rcard h3 {
+  color: var(--color-primer);
+  margin: 15px 0 10px;
+}
+
+.rcard p {
+  color: var(--color-text_off);
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.rcard button {
+  background-color: var(--color-text_on);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.rcard button:hover {
+  background-color: var(--color-sekunder);
+}
+
+.rcard:hover {
+  transform: scale(1.05);
 }

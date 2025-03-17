@@ -1,55 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APCEX 2025 - Register</title>
-  <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-  <nav>
-    <div class="logo">APECX 2025</div>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Event</a>
-        <ul class="dropdown-menu">
-          <li><a href="subevent1.html">Green Campaign</a></li>
-          <li><a href="subevent2.html">Blood Donor</a></li>
-          <li><a href="subevent3.html">Company Visit</a></li>
-          <li><a href="subevent4.html">Career Talk</a></li>
-          <li><a href="subevent5.html">SC Gathering</a></li>
-          <li><a href="subevent6.html">Awarding Night</a></li>
-          
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Competition</a>
-        <ul class="dropdown-menu">
-          <li><a href="subcomp1.html">PetroSmart</a></li>
-          <li><a href="subcomp2.html">Paper & Poster</a></li>
-          <li><a href="subcomp3.html">Business Case</a></li>
-        </ul>
-      </li>
-      <li><a href="register.html" class="register-btn">Register</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APCEX 2025 - Register</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">APECX 2025</div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#event">Event</a>
+          <ul class="dropdown-menu">
+            <li><a href="subevent1.html">Green Campaign</a></li>
+            <li><a href="subevent2.html">Blood Donor</a></li>
+            <li><a href="subevent3.html">Company Visit</a></li>
+            <li><a href="subevent4.html">Career Talk</a></li>
+            <li><a href="subevent5.html">SC Gathering</a></li>
+            <li><a href="subevent6.html">Awarding Night</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#competition">Competition</a>
+          <ul class="dropdown-menu">
+            <li><a href="subcomp1.html">PetroSmart</a></li>
+            <li><a href="subcomp2.html">Paper & Poster</a></li>
+            <li><a href="subcomp3.html">Business Case</a></li>
+          </ul>
+        </li>
+        <li><a href="#FAQ">Invitation</a></li>
+        <li><a href="register.html" class="register-btn">Register</a></li>
+      </ul>
+    </nav>
+    <section class="register">
+      <h2>Choose Your Competition</h2>
+      <div class="rcard-container">
+        <div class="rcard">
+          <img src="../image/petrosmart.png" alt="PetroSmart Competition" />
+          <h3>PetroSmart</h3>
+          <p>
+            Test your knowledge and skills in petroleum engineering through a
+            smart competition.
+          </p>
+          <a href="https://bit.ly/SCApecxRegistration" target="_blank">
+            <button>Register Now</button>
+          </a>
+        </div>
+        <div class="rcard">
+          <img src="../image/Paper.png" alt="Paper & Poster Competition" />
+          <h3>Paper & Poster</h3>
+          <p>
+            Showcase your research and innovative ideas in the Paper & Poster
+            Competition.
+          </p>
+          <a href="https://bit.ly/PPCApecxRegistrationr" target="_blank">
+            <button>Register Now</button>
+          </a>
+        </div>
+        <div class="rcard">
+          <img src="../image/Business.png" alt="Business Case Competition" />
+          <h3>Business Case</h3>
+          <p>
+            Compete in solving real-world business challenges with your best
+            strategies.
+          </p>
+          <a href="https://bit.ly/BCCApecxRegistration" target="_blank">
+            <button>Register Now</button>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <section class="register">
-    <h2>Register Now</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email" required>
-      <select>
-        <option value="competition">Competition</option>
-        <option value="event">Event</option>
-      </select>
-      <button type="submit">Register</button>
-    </form>
-  </section>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Events</h3>
+          <ul>
+            <li><a href="subevent1.html">Green Campaign</a></li>
+            <li><a href="subevent2.html">Blood Donor</a></li>
+            <li><a href="subevent3.html">Company Visit</a></li>
+            <li><a href="subevent4.html">Career Talk</a></li>
+            <li><a href="subevent5.html">SC Gathering</a></li>
+            <li><a href="subevent6.html">Awarding Night</a></li>
+          </ul>
+        </div>
 
-  <footer>
-    <p>APEcX 2025 © All Rights Reserved</p>
-  </footer>
-</body>
+        <div class="footer-section">
+          <h3>Competitions</h3>
+          <ul>
+            <li><a href="subcomp1.html">PetroSmart</a></li>
+            <li><a href="subcomp2.html">Paper & Poster</a></li>
+            <li><a href="subcomp3.html">Business Case</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>📞 <a href="tel:+6285733452459">+6285733452459</a></p>
+          <p>
+            📧
+            <a href="mailto:bagassupri2005@gmail.com">apecx2025@gmail.com</a>
+          </p>
+          <p>
+            📍
+            <a
+              href="https://maps.google.com?q=Universitas+Gadjah+Mada"
+              target="_blank"
+              >UGM, Yogyakarta</a
+            >
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <p>
+            <a href="https://www.instagram.com/apecx2025" target="_blank">
+              @apecx2025
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <p class="footer-bottom">APECX 2025 © All Rights Reserved</p>
+    </footer>
+  </body>
 </html>
