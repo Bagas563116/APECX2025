@@ -5,7 +5,7 @@
   --color-text_on: #f4a261;
   --color-primer: #053f5c;
   --color-sekunder: #f76c6c;
-  --color-primer2: #29b8ff;
+  --color-primer2: #429ebd;
 }
 * {
   margin: 0;
@@ -153,13 +153,13 @@ nav ul li a:hover {
 }
 
 .dropdown-menu li a:hover {
-  color: #ffffff98;
+  color: varz(--color-bg);
 }
 
 /* styling khusus untuk tombol Register */
 .register-btn {
-  background-color: #004080;
-  color: #fff !important;
+  background-color: var(--color-primer);
+  color: var(--color-bg);
   padding: 6px 12px;
   font-size: 14px;
   border-radius: 6px;
@@ -168,8 +168,8 @@ nav ul li a:hover {
 }
 
 .register-btn:hover {
-  background-color: #00408062;
-  color: #ffffff !important;
+  background-color: var(--color-text_off);
+  color: var(--color-bg);
 }
 
 /* --------------------------------hero section-------------------------------- */
@@ -656,7 +656,7 @@ footer {
   padding: 10px 20px;
   margin-top: 20px;
   background: var(--color-primer);
-  color: white;
+  color: var(--color-bg);
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
@@ -677,6 +677,7 @@ footer {
   color: var(--color-text_off);
   padding-top: 50px;
   padding-bottom: 20px;
+  font-size: 28px;
 }
 
 /* Card Layout */
@@ -713,21 +714,22 @@ footer {
 .rcard p {
   color: var(--color-text_off);
   font-size: 14px;
-  padding: 0 20px;
+  padding: 15px 20px;
 }
 
 .rcard button {
-  background-color: var(--color-text_on);
-  color: white;
+  background-color: var(--color-primer);
+  color: var(--color-bg);
   border: none;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .rcard button:hover {
-  background-color: var(--color-sekunder);
+  background-color: var(--color-text_off);
 }
 
 .rcard:hover {
