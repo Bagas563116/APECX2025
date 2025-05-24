@@ -735,3 +735,47 @@ footer {
 .rcard:hover {
   transform: scale(1.05);
 }
+
+/* ------------------------404 Not Found---------------------------- */
+.notfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.notfound img {
+  width: 900px;
+}
+
+/* ------------------------Subevent---------------------------- */
+
+.isisubevent {
+  padding: 50px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.isisubevent h1 {
+  color: var(--color-primer);
+  padding-bottom: 20px;
+  font-size: 55px;
+}
+
+.isisubevent p {
+  color: var(--color-text_off);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 100px;
+  padding-left: 100px;
+  text-align: justify;
+  text-indent: 4em;
+}
+
+.isisubevent img {
+  width: 60%;
+}
