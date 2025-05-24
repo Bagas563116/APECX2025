@@ -357,47 +357,32 @@ section {
   margin-top: 10px;
 }
 
-.event-cards {
+.gambar-geser {
   display: flex;
-  flex-wrap: nowrap; /* supaya scroll horizontal */
-  gap: 15px;
   overflow-x: auto;
-  padding: 10px;
-  max-width: 100%;
-  scrollbar-width: thin;
-  scrollbar-color: #004080 #ddd;
+  gap: 16px;
+  padding: 20px;
+  scroll-behavior: smooth;
 }
 
-/* custom scrollbar */
-.event-cards::-webkit-scrollbar {
-  height: 8px;
-}
-
-.event-cards::-webkit-scrollbar-track {
-  background: #ddd;
-  border-radius: 10px;
-}
-
-.event-cards::-webkit-scrollbar-thumb {
-  background: #004080;
-  border-radius: 10px;
-}
-
-.event-cards .card {
+.gambar-geser a {
   flex: 0 0 auto;
+  text-decoration: none;
 }
 
-.event-cards:hover .card {
-  opacity: 0.7;
+.gambar-geser img {
+  width: 270px;
+  height: 224px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: brightness(70%);
 }
 
-.event-cards .card:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.event-cards .card {
-  background: url("image/card comp.png") no-repeat center/cover;
+.gambar-geser img:hover {
+  filter: brightness(100%);
+  transform: scale(1.05);
 }
 
 /* ------------------------time line--------------------------*/
@@ -770,10 +755,11 @@ footer {
   color: var(--color-text_off);
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 75px;
+  padding-left: 75px;
   text-align: justify;
   text-indent: 4em;
+  font-size: 18px;
 }
 
 .isisubevent img {
