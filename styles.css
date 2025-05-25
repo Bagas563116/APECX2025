@@ -19,6 +19,26 @@ body {
   background-color: var(--color-bg);
 }
 
+h1 {
+  font-size: 35px;
+  font-weight: bold;
+  background: linear-gradient(to right, #041647, #0e41c6); /* Ungu gradasi */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Untuk kompatibilitas non-Webkit (opsional) */
+  color: transparent; /* Cadangan */
+}
+
+h2 {
+  font-size: 25px;
+  color: var(--color-text_off);
+}
+
+p {
+  font-size: 16px;
+  color: var(--color-text_off);
+}
+
 /* ------------------------- navigation ------------------------- */
 
 nav {
@@ -35,6 +55,7 @@ nav {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   z-index: 1000;
+  border-radius: 0 0 20px 20px;
 }
 
 .hamburger {
@@ -226,118 +247,85 @@ nav ul li a:hover {
 section {
   padding: 60px 50px;
   text-align: center;
-  background: var(--color-bg);
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rangkaian-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
 }
 
 .about p {
-  max-width: 800px;
-  margin: 20px auto;
-  text-align: justify;
+  margin: 20px 0;
+  text-indent: 4em;
 }
 
 .about h1 {
-  max-width: 800px;
-  margin: 20px auto;
-  margin-bottom: 40px;
-  text-align: justify;
-  text-size-adjust: 100px;
+  margin: 25px 0 10px;
+  line-height: 1.4;
+  font-size: 35px;
 }
 
-/* ----------------------cards section---------------------- */
+.about img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
 
-.cards {
+/* ----------------------competition section---------------------- */
+
+.card-comp {
   display: flex;
-  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  max-width: 800px;
-  gap: 15px;
-  margin: 0 auto;
+  padding: 40px;
 }
 
 .card {
-  background-color: var(--color-primer);
-  color: var(--color-bg);
-  padding: 20px;
-  border-radius: 10px;
   width: 220px;
-  height: 293px;
+  height: 320px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px 10px;
   text-align: center;
+
+  background-color: var(--color-bg);
+  color: var(--color-text_off);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.card img {
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card p {
+  margin: 10px;
   font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden; /* Mencegah teks keluar */
+  font-size: 14px;
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.card h3 {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 10px;
-}
-
-/* -----------------------card competition------------------------- */
-
-.competition {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 50px;
-}
-
-.competition-cards {
-  display: flex;
-  flex-wrap: wrap;
-  bottom: 20px;
-  justify-content: center;
-  gap: 15px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.competition h2 {
-  font-size: 24px;
-  color: var(--color-text_off);
-  margin-bottom: 50px;
-}
-
-.competition h1 {
-  font-size: 29px;
-  color: var(--color-text_off);
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-
-.competition-cards:hover .card {
-  opacity: 0.65;
+.card-comp:has(.card:hover) .card:not(:hover) {
   filter: blur(3px);
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 
-.competition-cards .card:hover {
-  opacity: 1;
-  filter: blur(0);
-  transform: scale(1.1);
+.card-comp .card:hover {
+  filter: none;
+  transform: scale(1.05);
 }
 
-.competition-cards .card {
-  background: url("image/card comp.png") no-repeat center/cover;
-}
-
-/* ----------------------event cards (skrollable)---------------------- */
+/* ----------------------event section (skrollable)---------------------- */
 .events {
   text-align: center;
   max-width: 900px;
@@ -345,16 +333,13 @@ section {
 }
 
 .events h2 {
-  font-size: 24px;
-  color: var(--color-text_off);
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .events h1 {
-  font-size: 29px;
-  color: var(--color-text_off);
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   margin-top: 10px;
+  line-height: 50px;
 }
 
 .gambar-geser {
@@ -363,6 +348,8 @@ section {
   gap: 16px;
   padding: 20px;
   scroll-behavior: smooth;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
 }
 
 .gambar-geser a {
@@ -385,7 +372,7 @@ section {
   transform: scale(1.05);
 }
 
-/* ------------------------time line--------------------------*/
+/* ------------------------timeline--------------------------*/
 
 .timeline {
   max-width: 900px;
@@ -394,10 +381,12 @@ section {
   text-align: center;
 }
 
-.timeline h2 {
-  font-size: 28px;
-  color: var(--color-text_off);
+.timeline h1 {
   margin-bottom: 50px;
+}
+
+.timeline h3 {
+  color: var(--color-text_off);
 }
 
 .timeline-container {
@@ -435,7 +424,7 @@ section {
 }
 
 .timeline-item .content {
-  background: #fff;
+  background: var(--color-bg);
   padding: 15px;
   border-radius: 8px;
   position: relative;
@@ -494,6 +483,9 @@ section {
 }
 
 /* ----------------------FAQ section---------------------- */
+.faq h1 {
+  padding-bottom: 50px;
+}
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
@@ -504,8 +496,12 @@ section {
   margin-bottom: 20px;
 }
 
+.faq-item h1 {
+  margin-bottom: 100px;
+}
 .faq-item h3 {
   font-size: 18px;
+  color: var(--color-primer);
 }
 
 .faq-item p {
@@ -516,10 +512,11 @@ section {
 /* ------------------------Footer---------------------------- */
 
 footer {
-  background: #001f54;
+  background: linear-gradient(to right, #041647, #0e41c6);
   color: var(--color-bg);
   padding: 30px 0;
   text-align: center;
+  border-radius: 30px 30px 0 0;
 }
 
 .footer-container {
@@ -566,6 +563,7 @@ footer {
 
 .footer-section p {
   margin: 5px 0;
+  color: var(--color-bg);
 }
 
 .footer-section a {
@@ -588,11 +586,10 @@ footer {
   margin-top: 20px;
   font-size: 14px;
   opacity: 0.8;
+  color: var(--color-bg);
 }
 
-/* ------------------------competition---------------------------- */
-
-/* Competition Section */
+/* ------------------------subcompetition page---------------------------- */
 
 .competition-container {
   display: flex;
@@ -735,7 +732,7 @@ footer {
   width: 900px;
 }
 
-/* ------------------------Subevent---------------------------- */
+/* ------------------------Subevent page---------------------------- */
 
 .isisubevent {
   padding: 50px;
