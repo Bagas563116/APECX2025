@@ -620,9 +620,11 @@ footer {
   padding: 20px;
 }
 
-.competition-info h2 {
-  font-size: 24px;
-  color: var(--color-primer);
+.competition-info h1 {
+  font-size: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
 .competition-info p {
