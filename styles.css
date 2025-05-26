@@ -22,11 +22,11 @@ body {
 h1 {
   font-size: 35px;
   font-weight: bold;
-  background: linear-gradient(to right, #041647, #0e41c6); /* Ungu gradasi */
+  background: linear-gradient(to right, #041647, #0e41c6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* Untuk kompatibilitas non-Webkit (opsional) */
-  color: transparent; /* Cadangan */
+  background-clip: text;
+  color: transparent;
 }
 
 h2 {
@@ -746,14 +746,18 @@ footer {
 
 .isisubevent h1 {
   color: var(--color-primer);
-  padding-bottom: 20px;
-  font-size: 55px;
+  font-size: 78px;
+}
+
+.line {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #041647, #0e41c6);
+  margin: -20px 125px 40px 125px;
 }
 
 .isisubevent p {
   color: var(--color-text_off);
-  padding-top: 20px;
-  padding-bottom: 20px;
   padding-right: 75px;
   padding-left: 75px;
   text-align: justify;
@@ -762,5 +766,63 @@ footer {
 }
 
 .isisubevent img {
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 60%;
+}
+
+.isisubeventSC {
+  padding: 50px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.isisubeventSC h1 {
+  color: var(--color-primer);
+  font-size: 78px;
+  line-height: 80px;
+}
+
+.lineSC {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #041647, #0e41c6);
+  margin: 0px 125px 40px 125px;
+}
+
+.isisubeventSC p {
+  color: var(--color-text_off);
+  padding-right: 75px;
+  padding-left: 75px;
+  text-align: justify;
+  text-indent: 4em;
+  font-size: 18px;
+}
+
+.isisubeventSC img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 60%;
+}
+
+.dokumentasi {
+  padding: 50px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dokumentasi h1 {
+  color: var(--color-primer);
+  padding-top: 10px;
+  font-size: 70px;
+}
+
+.dokumentasi img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 95%;
 }
