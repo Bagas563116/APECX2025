@@ -323,6 +323,8 @@ section {
 .card-comp .card:hover {
   filter: none;
   transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5), 0 0 20px rgba(0, 123, 255, 0.6),
+    0 0 30px rgba(0, 123, 255, 0.7);
 }
 
 /* ----------------------event section (skrollable)---------------------- */
@@ -364,12 +366,12 @@ section {
   border-radius: 10px;
   cursor: pointer;
   transition: filter 0.3s ease, transform 0.3s ease;
-  filter: brightness(70%);
 }
 
 .gambar-geser img:hover {
-  filter: brightness(100%);
   transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.6),
+    0 0 15px rgba(0, 123, 255, 0.7);
 }
 
 /* ------------------------timeline--------------------------*/
