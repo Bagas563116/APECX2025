@@ -4,50 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paper & Poster - APECX 2025</title>
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo">APECX 2025</div>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-      <ul id="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#event">Event</a>
-          <ul class="dropdown-menu">
-            <li><a href="subevent1.html">Mangrove Planting</a></li>
-            <li><a href="subevent2.html">Blood Donor</a></li>
-            <li><a href="subevent3.html">Company Visit</a></li>
-            <li><a href="subevent4.html">Career Talk</a></li>
-            <li><a href="subevent5.html">SC Gathering</a></li>
-            <li><a href="subevent6.html">Awarding Night</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#competition">Competition</a>
-          <ul class="dropdown-menu">
-            <li><a href="subcomp1.html">PetroSmart</a></li>
-            <li><a href="subcomp2.html">Paper & Poster</a></li>
-            <li><a href="subcomp3.html">Business Case</a></li>
-          </ul>
-        </li>
-        <li>
-          <a
-            href="https://drive.google.com/file/d/1waB60NEh1XOdmIaP6FVNh1Y74o0h1wCj/view?usp=drive_link"
-            target="_blank"
-            >Invitation</a
-          >
-        </li>
-        <li><a href="register.html" class="register-btn">Register</a></li>
-      </ul>
+    <nav class="nav">
+      <a class="logo"> <img src="../image/logo.png" /></a>
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#event">Event</a>
+        <a href="../index.html#competition">Competition</a>
+        <a
+          href="https://drive.google.com/file/d/1waB60NEh1XOdmIaP6FVNh1Y74o0h1wCj/view?usp=drive_link"
+          target="_blank"
+          >Invitation</a
+        >
+        <a href="register.html" class="register-btn">Register</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a id="hamburger"><i data-feather="menu"></i></a>
+      </div>
     </nav>
 
     <section class="competition-container">
       <div class="competition-card">
         <img src="../image/Paper.png" alt="PetroSmart Competition" />
       </div>
+      <div class="competition-card-phone">
+        <img src="../image/PP-LOGO.png" alt="PetroSmart Competition" />
+      </div>
       <div class="competition-info">
-        <h1>PAPER & POSTER COMPETITION</h1>
+        <h1>PAPER & POSTER <span>COMPETITION</span></h1>
         <p>
           The Paper and Poster Competition at APECX 2025 invites undergraduate
           students to address key challenges in the oil and gas industry. The
@@ -63,7 +51,7 @@
         </p>
         <a href="404.html" class="btn-register">Register Now</a>
         <a
-          href="https://drive.google.com/file/d/1iZ3F8BN7cnM9VDlIWQbHnvRNrw2HP7Kx/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1VQQHSRx8CU4U-6nJ4xNBhhwlbttTnw2U/view?usp=drive_link"
           target="_blank"
           target="_blank"
           class="btn-register"
@@ -124,5 +112,9 @@
 
       <p class="footer-bottom">APECX 2025 © All Rights Reserved</p>
     </footer>
+    <script src="../script.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

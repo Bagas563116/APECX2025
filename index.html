@@ -4,53 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>APECX 2025</title>
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo">APECX 2025</div>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-      <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#event">Event</a>
-          <ul class="dropdown-menu">
-            <li><a href="pages/subevent1.html">Mangrove Planting</a></li>
-            <li><a href="pages/subevent2.html">Blood Donor</a></li>
-            <li><a href="pages/subevent3.html">Company Visit</a></li>
-            <li><a href="pages/subevent4.html">Career Talk</a></li>
-            <li><a href="pages/subevent5.html">SC Gathering</a></li>
-            <li><a href="pages/subevent6.html">Awarding Night</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#competition">Competition</a>
-          <ul class="dropdown-menu">
-            <li><a href="pages/subcomp1.html">PetroSmart</a></li>
-            <li><a href="pages/subcomp2.html">Paper & Poster</a></li>
-            <li><a href="pages/subcomp3.html">Business Case</a></li>
-          </ul>
-        </li>
-        <li>
-          <a
-            href="https://drive.google.com/file/d/1waB60NEh1XOdmIaP6FVNh1Y74o0h1wCj/view?usp=drive_link"
-            target="_blank"
-            >Invitation</a
-          >
-        </li>
-        <li><a href="pages/register.html" class="register-btn">Register</a></li>
-      </ul>
+
+    <nav class="nav">
+      <a class="logo"> <img src="image/logo.png"></a>
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#event">Event</a>
+        <a href="#competition">Competition</a>
+        <a href="https://drive.google.com/file/d/1waB60NEh1XOdmIaP6FVNh1Y74o0h1wCj/view?usp=drive_link" target="_blank">Invitation</a>
+        <a href="pages/register.html" class="register-btn">Register</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a id="hamburger"><i data-feather="menu"></i></a>
+      </div> 
     </nav>
 
-  <!-------------------- hero section ---------------------->
 
-    <div class="hero">
+ <!-------------------- hero section ---------------------->
+    
+    <section class ="hero">
+      <main class="content"></main>
+    </section>
+
+    <div class="tagline">
       <h1>#BuildingDreamsandDrivingChances</h1>
-      <p>
-        Society of Petroleum Engineers Universitas Gadjah Mada Student Chapter
-        (SPE UGM – SC) is a non-profit organization under SPE Indonesia & SPE
-        Java Section established in November 2008.
-      </p>
+      <p>Society of Petroleum Engineers Universitas Gadjah Mada Student Chapter (SPE UGM – SC) is a non-profit organization under SPE Indonesia & SPE Java Section established in November 2008.</p>
     </div>
 
   <!-------------------- about section ---------------------->
@@ -98,9 +81,22 @@
           <a href="pages/subcomp3.html">  
             <img src="image/Business.png" alt="Kartu 3">
             <p>BUSINESS CASE COMPETITION</p>
-          </a>
+          </a> 
         </div>
       </div>
+
+      <div class="card-comp-phone">
+        <a href="pages/subcomp1.html">
+          <img src="image/PS.png" alt="Kartu 1">
+        </a>
+        <a href="pages/subcomp2.html">
+          <img src="image/PPC.png" alt="Kartu 2">
+        </a>
+        <a href="pages/subcomp3.html">  
+          <img src="image/BC.png" alt="Kartu 3">
+        </a> 
+      </div>
+
     </section>
 
     <!-------------------- event Section ---------------------->
@@ -278,5 +274,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
