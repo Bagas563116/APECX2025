@@ -1024,6 +1024,10 @@ footer {
     padding-top: 80px;
   }
 
+  .register h3 {
+    font-size: 2rem;
+  }
+
   .notfound img {
     width: 80%;
   }
